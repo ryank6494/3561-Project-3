@@ -1,0 +1,18 @@
+1 library IEEE;
+2 use IEEE.STD_LOGIC_1164. ALL;
+3 use IEEE.STD_LOGIC_ARITH. ALL;
+4 use IEEE.STD_LOGIC_UNSIGNED. ALL;
+5 entity mult4X4 is6 port (Clk, St: in std_logic;
+
+7 Mplier, Mcand : in std_logic_vector(3 downto 0);
+8 Done: out std_logic;
+9 Product: out std_logic_vector (7 downto 0));
+10 end mult4X4;
+11 architecture behave1 of mult4X4 is
+12 signal State: integer range 0 to 9;
+13 signal ACC: std_logic_vector(8 downto 0); -- accumulator
+  14 alias M: std_logic is ACC(0); -- M is bit 0 of ACC
+  15 begin
+  16 Product <= ACC (7 downto 0);
+17 process (Clk)
+  18 begin19 if Clk’event and Clk = ‘1’ then -- executes on rising edge of clock
