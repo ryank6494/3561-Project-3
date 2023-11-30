@@ -1,0 +1,5 @@
+vhdl work "mult_components.vhd"
+vhdl work "RegN.vhd"
+vhdl work "Controller.vhd"
+vhdl work "AdderN.vhd"
+vhdl work "MultTop.vhd"

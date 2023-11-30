@@ -1,0 +1,9 @@
+[Inputs]
+Start
+Clk
+=Multiplier[3:0]=
+=Multiplicand[3:0]=
+[Outputs]
+Done
+=Product[7:0]=
+[BiDir]

@@ -1,0 +1,5 @@
+set -tmpdir "/home/ise/ECE3561Proj3/xst/projnav.tmp"
+set -xsthdpdir "/home/ise/ECE3561Proj3/xst"
+elaborate
+-ifn mult_components.prj
+-ifmt mixed
