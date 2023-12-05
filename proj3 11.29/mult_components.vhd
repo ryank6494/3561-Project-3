@@ -7,9 +7,10 @@
 --   To use any of the example code shown below, uncomment the lines and modify as necessary
 --
 
+-----------might just have to get rid of this...
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
-
 package mult_components is
 component Controller			-- multiplier controller
 	generic (N:integer :=2);
@@ -36,10 +37,12 @@ component RegN					--N-bit register with load/shift/clear
          Clear : in  STD_LOGIC;	-- clear enable
          SerIn : in  STD_LOGIC );	-- serial input
 end component;
-
-end mult_components;
-
-package body mult_components is
-
+component Counter
+	generic (N:integer :=4);
+	port( EN_CNTR : in std_logic;
+			CLR_CNTR_L : in std_logic;
+			CLK : in std_logic;
+			C4 : out std_logic);
+end component;
 
 end mult_components;

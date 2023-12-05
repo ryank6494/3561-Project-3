@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "/home/ise/ECE3561Proj3/testbench_isim_beh.exe" -prj "/home/ise/ECE3561Proj3/testbench_beh.prj" "work.testbench" 
+-intstyle "ise" -incremental -o "/home/ise/ECE3561Proj3/MultTop_isim_beh.exe" -prj "/home/ise/ECE3561Proj3/MultTop_beh.prj" "work.MultTop" 

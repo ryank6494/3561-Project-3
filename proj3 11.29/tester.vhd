@@ -7,7 +7,7 @@
   ENTITY testbench IS
   END testbench;
 
-	use work.mult_components.All;
+	--use work.mult_components.All;
   ARCHITECTURE behavior OF testbench IS 
 
   -- Component Declaration
@@ -21,15 +21,20 @@
 				Done : out  STD_LOGIC);
           END COMPONENT;
 		-- our signals
-          signal Mout,Qout:			std_logic_vector(3 downto 0);
-			 signal Dout,Aout:			std_logic_vector(4 downto 0);
-			 signal Load,Shift,AddA:	STD_LOGIC;
-         
+          signal Multiplier,Multiplicand :			std_logic_vector(3 downto 0);
+			 signal Product:			std_logic_vector(7 downto 0);
+			 signal Start,Clk:	STD_LOGIC := '0';
+			 signal Done:			STD_LOGIC := '1';
   BEGIN
 
   -- Component Instantiation
-          uut: MultTop PORT MAP(Mout,Qout,Dout,Aout,Load,Shift,AddA
-          );
+          uut: MultTop PORT MAP(
+			 Multiplier => Multiplier,
+			 Multiplicand => Multiplicand,
+			 Product => Product,
+			 Start => Start,
+			 Clk => Clk,
+			 Done => Done);
 		
 		Clk <= not Clk after 10 ns;
   --  Test Bench Statements

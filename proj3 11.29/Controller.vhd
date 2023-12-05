@@ -29,7 +29,9 @@ entity Controller is
            Load : out  STD_LOGIC;	-- load M,Q; Clear A
            Shift : out  STD_LOGIC;	-- Shift A:Q
            AddA : out  STD_LOGIC;	-- Adder A
-           Done : out  STD_LOGIC);	-- Alg complete
+           Done : out  STD_LOGIC;	-- Alg complete
+			  C4	 : in std_logic);
+
 end Controller;
 
 architecture Behavioral of Controller is

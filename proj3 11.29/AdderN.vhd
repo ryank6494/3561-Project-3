@@ -13,14 +13,19 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity AdderN is
 	generic (N:integer :=4);
-	port( A,B : in std_logic_vector(N-1 downto 0);
-		S: out std_logic_vector(N downto 0) );
+	port( A,B : in std_logic_vector(N-1 downto 0);	-- N bit
+		S: out std_logic_vector(N-1 downto 0);
+		C5: out std_logic);			-- N+1 bit
 end AdderN;
 
 architecture Behavioral of AdderN is
-
 begin
-	S <= std_logic_vector(('0' & UNSIGNED(A)) + UNSIGNED(B));
-
+    process
+        variable temp_sum : unsigned(N downto 0);
+    begin
+        temp_sum := ('0' & unsigned(A)) + unsigned(B);
+        S <= std_logic_vector(temp_sum(N-1 downto 0));
+        C5 <= temp_sum(N);
+	
+    end process;
 end Behavioral;
-

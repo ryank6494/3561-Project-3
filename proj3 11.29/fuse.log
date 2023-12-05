@@ -1,17 +1,30 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -o /home/ise/ECE3561Proj3/testbench_isim_beh.exe -prj /home/ise/ECE3561Proj3/testbench_beh.prj work.testbench 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -o /home/ise/ECE3561Proj3/MultTop_isim_beh.exe -prj /home/ise/ECE3561Proj3/MultTop_beh.prj work.MultTop 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 1
 Turning on mult-threading, number of parallel sub-compilation jobs: 0 
 Determining compilation order of HDL files
 Parsing VHDL file "/home/ise/ECE3561Proj3/RegN.vhd" into library work
+Parsing VHDL file "/home/ise/ECE3561Proj3/Counter.vhd" into library work
 Parsing VHDL file "/home/ise/ECE3561Proj3/Controller.vhd" into library work
 Parsing VHDL file "/home/ise/ECE3561Proj3/AdderN.vhd" into library work
+WARNING:HDLCompiler:1369 - "/home/ise/ECE3561Proj3/AdderN.vhd" Line 23: Possible infinite loop; process does not have a wait statement
 Parsing VHDL file "/home/ise/ECE3561Proj3/MultTop.vhd" into library work
-ERROR:HDLCompiler:104 - "/home/ise/ECE3561Proj3/MultTop.vhd" Line 25: Cannot find <mult_components> in library <work>. Please ensure that the library was compiled, and that a library and a use clause are present in the VHDL file.
-ERROR:HDLCompiler:69 - "/home/ise/ECE3561Proj3/MultTop.vhd" Line 32: <controller> is not declared.
-ERROR:HDLCompiler:69 - "/home/ise/ECE3561Proj3/MultTop.vhd" Line 34: <addern> is not declared.
-ERROR:HDLCompiler:69 - "/home/ise/ECE3561Proj3/MultTop.vhd" Line 36: <regn> is not declared.
-ERROR:HDLCompiler:69 - "/home/ise/ECE3561Proj3/MultTop.vhd" Line 38: <regn> is not declared.
-ERROR:HDLCompiler:69 - "/home/ise/ECE3561Proj3/MultTop.vhd" Line 40: <regn> is not declared.
-ERROR:HDLCompiler:854 - "/home/ise/ECE3561Proj3/MultTop.vhd" Line 24: Unit <behavioral> ignored due to previous errors.
-VHDL file /home/ise/ECE3561Proj3/MultTop.vhd ignored due to errors
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 96844 KB
+Fuse CPU Usage: 1070 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling architecture behavioral of entity Controller [\Controller(2)\]
+Compiling architecture behavioral of entity AdderN [\AdderN(4)\]
+Compiling architecture behavioral of entity RegN [\RegN(4)\]
+Compiling architecture behavioral of entity RegN [\RegN(9)\]
+Compiling architecture behavioral of entity Counter [\Counter(4)\]
+Compiling architecture behavioral of entity multtop
+Time Resolution for simulation is 1ps.
+Compiled 14 VHDL Units
+Built simulation executable /home/ise/ECE3561Proj3/MultTop_isim_beh.exe
+Fuse Memory Usage: 111624 KB
+Fuse CPU Usage: 1150 ms
+GCC CPU Usage: 470 ms

@@ -83,8 +83,6 @@ Compiling vhdl file "/home/ise/ECE3561Proj3/AdderN.vhd" in Library work.
 Architecture behavioral of Entity addern is up to date.
 Compiling vhdl file "/home/ise/ECE3561Proj3/RegN.vhd" in Library work.
 Architecture behavioral of Entity regn is up to date.
-Compiling vhdl file "/home/ise/ECE3561Proj3/mult_components.vhd" in Library work.
-Architecture mult_components of Entity mult_components is up to date.
 Compiling vhdl file "/home/ise/ECE3561Proj3/MultTop.vhd" in Library work.
 Entity <multtop> compiled.
 Entity <multtop> (Architecture <behavioral>) compiled.
@@ -93,17 +91,16 @@ Entity <multtop> (Architecture <behavioral>) compiled.
 *                     Design Hierarchy Analysis                         *
 =========================================================================
 Analyzing hierarchy for entity <MultTop> in library <work> (architecture <behavioral>).
-"/home/ise/ECE3561Proj3/MultTop.vhd" line 40: In entity <MultTop>
-ERROR:Xst:2587 - Port <Din> of instance <ACC> has different type in definition <RegN>.
-ERROR:Xst:2587 - Port <Dout> of instance <ACC> has different type in definition <RegN>.
-component <RegN> with generics:
-  N: from generic/parameter on component : integer (-2147483648 to 2147483647) := 9
+"/home/ise/ECE3561Proj3/MultTop.vhd" line 36: In entity <MultTop>
+ERROR:Xst:2587 - Port <S> of instance <A> has different type in definition <AdderN>.
+component <AdderN> with generics:
+  N: from generic/parameter on component : integer (-2147483648 to 2147483647) := 4
 --> 
 
 
-Total memory usage is 591048 kilobytes
+Total memory usage is 590780 kilobytes
 
-Number of errors   :    2 (   0 filtered)
+Number of errors   :    1 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 
