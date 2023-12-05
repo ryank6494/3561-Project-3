@@ -5,10 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="Xst" num="2587" delta="new" >Port &lt;<arg fmt="%s" index="1">Din</arg>&gt; of instance &lt;<arg fmt="%s" index="2">ACC</arg>&gt; has different type in definition &lt;<arg fmt="%s" index="3">RegN</arg>&gt;.
-</msg>
-
-<msg type="error" file="Xst" num="2587" delta="new" >Port &lt;<arg fmt="%s" index="1">Dout</arg>&gt; of instance &lt;<arg fmt="%s" index="2">ACC</arg>&gt; has different type in definition &lt;<arg fmt="%s" index="3">RegN</arg>&gt;.
+<msg type="error" file="Xst" num="2587" delta="new" >Port &lt;<arg fmt="%s" index="1">S</arg>&gt; of instance &lt;<arg fmt="%s" index="2">A</arg>&gt; has different type in definition &lt;<arg fmt="%s" index="3">AdderN</arg>&gt;.
 </msg>
 
 </messages>
