@@ -1,22 +1,12 @@
 ----------------------------------------------------------------------------------
 -- Company: 
--- Engineer: 
+-- Engineer: Ryan Kelsey and Mitch Le Roy
 -- 
--- Create Date:    01:20:14 11/29/2023 
+-- Create Date:    01:16:48 11/29/2023 
 -- Design Name: 
 -- Module Name:    RegN - Behavioral 
--- Project Name: 
--- Target Devices: 
--- Tool versions: 
--- Description: 
---
--- Dependencies: 
---
--- Revision: 
--- Revision 0.01 - File Created
--- Additional Comments: 
---
-----------------------------------------------------------------------------------
+-- Project Name: ECE3561 Project 3
+--------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
@@ -51,4 +41,5 @@ begin
 	
 	Dout <= Dinternal;
 end Behavioral;
+
 

@@ -1,22 +1,12 @@
 ----------------------------------------------------------------------------------
 -- Company: 
--- Engineer: 
+-- Engineer: Ryan Kelsey and Mitch Le Roy
 -- 
--- Create Date:    01:10:12 11/29/2023 
+-- Create Date:    08:36:58 12/04/2023 
 -- Design Name: 
--- Module Name:    Controller - Behavioral 
--- Project Name: 
--- Target Devices: 
--- Tool versions: 
--- Description: 
---
--- Dependencies: 
---
--- Revision: 
--- Revision 0.01 - File Created
--- Additional Comments: 
---
-----------------------------------------------------------------------------------
+-- Module Name:    Controller (Rising Edge) - Behavioral 
+-- Project Name: ECE3561 Project 3
+--------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 USE ieee.numeric_std.ALL;
@@ -37,7 +27,7 @@ end Controller;
 architecture Behavioral of Controller is
 	type states is (HaltS,InitS,QtempS,AddS,ShiftS);
 	signal state: states := HaltS;
-	signal CNT: UNSIGNED(N-1 downto 0);
+
 begin
 	-- moore model outputs to control the datapath
 	Done <= '1' when state = HaltS else '0'; 	-- end of algorithm
@@ -47,7 +37,7 @@ begin
 	
 	process(clk)
 	begin
-		if rising_edge(Clk) then
+		if rising_edge(Clk) then				-- rising now
 			case state is
 				when HaltS	=> if Start = '1' then
 										state <= InitS;
@@ -59,7 +49,7 @@ begin
 										state <= ShiftS;
 									end if;
 				when AddS	=> state <= ShiftS;
-				when ShiftS	=> if (CNT = 2**N - 1) then
+				when ShiftS	=> if (C4 = '1') then
 										state <= HaltS;
 									else
 										state <= QtempS;
@@ -67,7 +57,4 @@ begin
 			end case;
 		end if;
 	end process;
-
-
 end Behavioral;
-

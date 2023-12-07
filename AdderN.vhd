@@ -1,11 +1,11 @@
 ----------------------------------------------------------------------------------
 -- Company: 
--- Engineer: 
+-- Engineer: Ryan Kelsey and Mitch Le Roy
 -- 
 -- Create Date:    01:16:48 11/29/2023 
 -- Design Name: 
 -- Module Name:    AdderN - Behavioral 
--- Project Name: 
+-- Project Name: ECE3561 Project 3
 --------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -14,18 +14,10 @@ use IEEE.NUMERIC_STD.ALL;
 entity AdderN is
 	generic (N:integer :=4);
 	port( A,B : in std_logic_vector(N-1 downto 0);	-- N bit
-		S: out std_logic_vector(N-1 downto 0);
-		C5: out std_logic);			-- N+1 bit
+		S: out std_logic_vector(N downto 0));			-- N+1 bit
 end AdderN;
 
 architecture Behavioral of AdderN is
 begin
-    process
-        variable temp_sum : unsigned(N downto 0);
-    begin
-        temp_sum := ('0' & unsigned(A)) + unsigned(B);
-        S <= std_logic_vector(temp_sum(N-1 downto 0));
-        C5 <= temp_sum(N);
-	
-    end process;
+        S <= std_logic_vector(('0' & unsigned(A)) + unsigned(B));
 end Behavioral;

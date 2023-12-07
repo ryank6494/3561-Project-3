@@ -1,3 +1,12 @@
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: Ryan Kelsey and Mitch Le Roy
+-- 
+-- Create Date:    05:56:48 11/29/2023 
+-- Design Name: 
+-- Module Name:    tester - Behavioral 
+-- Project Name: ECE3561 Project 3
+--------------------------------------------------------------------------------
 -- TestBench Template 
 
   LIBRARY ieee;
@@ -21,10 +30,10 @@
 				Done : out  STD_LOGIC);
           END COMPONENT;
 		-- our signals
-          signal Multiplier,Multiplicand :			std_logic_vector(3 downto 0);
+          signal Multiplier,Multiplicand :	std_logic_vector(3 downto 0) := (others => '0');
 			 signal Product:			std_logic_vector(7 downto 0);
 			 signal Start,Clk:	STD_LOGIC := '0';
-			 signal Done:			STD_LOGIC := '1';
+			 signal Done:			STD_LOGIC;
   BEGIN
 
   -- Component Instantiation
@@ -36,7 +45,7 @@
 			 Clk => Clk,
 			 Done => Done);
 		
-		Clk <= not Clk after 10 ns;
+		Clk <= not Clk after 10 ns;		-- 20ns period clock
   --  Test Bench Statements
      tb : PROCESS
      BEGIN
